@@ -42,12 +42,12 @@ public class LoteService {
 		return result;
 	}
 
-	public String[] listarLotes() {
+	public String listarLotes() {
 		Lote[] lotes = this.loteRepository.listarLotes();
-		String[] listaDeLotes = new String[lotes.length];
+		String listaDeLotes = new String();
 
 		for (int i = 0; i < lotes.length; i++)
-			listaDeLotes[i] = lotes[i].toString();
+			listaDeLotes += lotes[i].toString() + "\n";
 		
 		return listaDeLotes;
 	}
