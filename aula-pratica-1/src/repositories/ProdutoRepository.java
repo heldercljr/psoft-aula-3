@@ -7,10 +7,19 @@ import entities.Produto;
 
 public class ProdutoRepository {
 	
+	private static ProdutoRepository instance;
+	
 	private List<Produto> produtos;
 
-	public ProdutoRepository() {
+	private ProdutoRepository() {
 		this.produtos = new ArrayList<Produto>();
+	}
+
+	public static ProdutoRepository getInstance() {
+		if (instance == null)
+			instance = new ProdutoRepository();
+		
+		return instance;
 	}
 
 	public boolean salvarProduto(Produto produto) {
