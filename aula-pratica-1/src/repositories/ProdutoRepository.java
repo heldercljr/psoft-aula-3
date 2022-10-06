@@ -22,6 +22,10 @@ public class ProdutoRepository {
 		return result;
 	}
 
+	public boolean consultarProduto(Produto produto) {
+		return this.produtos.contains(produto);
+	}
+
 	public boolean removerProduto(Produto produto) {
 		boolean result = false;
 
