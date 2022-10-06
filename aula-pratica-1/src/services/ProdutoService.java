@@ -24,7 +24,13 @@ public class ProdutoService {
 		return this.produtoRepository.removerProduto(produto);
 	}
 
-	public Produto[] listarProdutos() {
-		return this.produtoRepository.listarProdutos();
+	public String[] listarProdutos() {
+		Produto[] produtos = this.produtoRepository.listarProdutos();
+		String[] listaDeProdutos = new String[produtos.length];
+
+		for (int i = 0; i < produtos.length; i++)
+			listaDeProdutos[i] = produtos[i].toString();
+
+		return listaDeProdutos;
 	}
 }
