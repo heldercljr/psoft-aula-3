@@ -13,7 +13,7 @@ public class LoteRepository {
 		this.lotes = new ArrayList<Lote>();
 	}
 
-	public boolean addLote(Lote lote) {
+	public boolean salvarLote(Lote lote) {
 		boolean result = false;
 
 		if (!this.lotes.contains(lote))
@@ -22,7 +22,7 @@ public class LoteRepository {
 		return result;
 	}
 
-	public boolean removeLote(Lote lote) {
+	public boolean removerLote(Lote lote) {
 		boolean result = false;
 
 		if (this.lotes.contains(lote))
@@ -31,7 +31,7 @@ public class LoteRepository {
 		return result;
 	}
 
-	public Lote[] listLotes() {
+	public Lote[] listarLotes() {
 		return (Lote[]) this.lotes.toArray();
 	}
 }

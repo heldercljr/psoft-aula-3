@@ -13,7 +13,7 @@ public class ProdutoRepository {
 		this.produtos = new ArrayList<Produto>();
 	}
 
-	public boolean addProduto(Produto produto) {
+	public boolean salvarProduto(Produto produto) {
 		boolean result = false;
 
 		if (!this.produtos.contains(produto))
@@ -22,7 +22,7 @@ public class ProdutoRepository {
 		return result;
 	}
 
-	public boolean removeProduto(Produto produto) {
+	public boolean removerProduto(Produto produto) {
 		boolean result = false;
 
 		if (this.produtos.contains(produto))
@@ -31,7 +31,7 @@ public class ProdutoRepository {
 		return result;
 	}
 
-	public Produto[] listProdutos() {
+	public Produto[] listarProdutos() {
 		return (Produto[]) this.produtos.toArray();
 	}
 }
