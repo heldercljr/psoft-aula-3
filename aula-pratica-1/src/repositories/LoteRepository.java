@@ -21,4 +21,17 @@ public class LoteRepository {
 
 		return result;
 	}
+
+	public boolean removeLote(Lote lote) {
+		boolean result = false;
+
+		if (this.lotes.contains(lote))
+			result = this.lotes.remove(lote);
+		
+		return result;
+	}
+
+	public Lote[] listLotes() {
+		return (Lote[]) this.lotes.toArray();
+	}
 }
