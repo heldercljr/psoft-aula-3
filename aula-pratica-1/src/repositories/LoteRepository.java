@@ -32,6 +32,6 @@ public class LoteRepository {
 	}
 
 	public Lote[] listarLotes() {
-		return (Lote[]) this.lotes.toArray();
+		return this.lotes.toArray(new Lote[0]);
 	}
 }

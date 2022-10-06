@@ -45,6 +45,6 @@ public class ProdutoRepository {
 	}
 
 	public Produto[] listarProdutos() {
-		return (Produto[]) this.produtos.toArray();
+		return this.produtos.toArray(new Produto[0]);
 	}
 }
