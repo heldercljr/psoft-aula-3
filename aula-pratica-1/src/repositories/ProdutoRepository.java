@@ -31,7 +31,7 @@ public class ProdutoRepository {
 		return result;
 	}
 
-	public boolean consultarProduto(Produto produto) {
+	public boolean existeProduto(Produto produto) {
 		return this.produtos.contains(produto);
 	}
 
