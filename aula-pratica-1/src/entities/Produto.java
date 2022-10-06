@@ -1,13 +1,15 @@
 package entities;
 
 public class Produto {
-	
+
 	private String nome;
 	private String fabricante;
 	private Double preco;
 
 	public Produto(String nome, String fabricante, Double preco) {
-
+		this.nome = nome;
+		this.fabricante = fabricante;
+		this.preco = preco;
 	}
 
 	public String getNome() {
